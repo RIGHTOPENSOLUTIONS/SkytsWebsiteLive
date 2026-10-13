@@ -159,6 +159,7 @@ ul {
   position: relative;
   padding: 10px 12px;
   text-decoration: none;
+  white-space: nowrap;
   border-radius: 999px;
   transition: color 180ms ease, background-color 180ms ease;
 }
@@ -1043,6 +1044,310 @@ h3 {
   color: var(--color-muted);
 }
 
+.idea-section {
+  border-top: 1px solid var(--color-line);
+}
+
+.idea-heading > p.idea-subheading {
+  margin-top: 18px;
+  color: var(--color-ink);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.idea-heading > p:last-child {
+  max-width: 900px;
+}
+
+.idea-audiences {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.idea-audience-card {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid #d6dedb;
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.idea-audience-card:hover {
+  border-color: var(--color-accent-deep);
+  box-shadow: 0 8px 20px rgba(21, 20, 17, 0.06);
+  transform: translateY(-3px);
+}
+
+.idea-audience-card .concept-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 22px;
+  color: var(--color-accent-deep);
+}
+
+.idea-audience-card:last-child .concept-icon {
+  color: var(--color-forest);
+}
+
+.idea-audience-card h3 {
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+
+.idea-audience-card p {
+  margin-top: 14px;
+  color: var(--color-muted);
+}
+
+.idea-evolution {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-line);
+}
+
+.idea-evolution > h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.product-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-stage {
+  position: relative;
+  min-width: 0;
+  text-align: center;
+}
+
+.product-stage-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  color: var(--color-forest);
+  border: 1px solid #c5d0c9;
+  border-radius: var(--radius-small);
+  background: #f5f8f7;
+}
+
+.product-stage-icon .concept-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.product-stage h4 {
+  margin: 18px 0 0;
+  font-size: 1.375rem;
+  line-height: 1.3;
+}
+
+.product-stage p {
+  margin-top: 6px;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.product-stage-core .product-stage-icon {
+  color: var(--color-accent-deep);
+  border-color: #e4b592;
+  background: var(--color-accent-soft);
+}
+
+.product-stage-core h4 {
+  color: var(--color-accent-deep);
+}
+
+.product-stage-core sup {
+  margin-left: 1px;
+  font-size: 0.35em;
+  line-height: 1;
+  vertical-align: super;
+}
+
+.product-connection {
+  position: absolute;
+  top: 32px;
+  left: calc(50% + 44px);
+  width: calc(100% - 48px);
+  height: 1px;
+  background: #c5d0c9;
+  transform-origin: left;
+}
+
+.product-connection::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--color-accent-deep);
+  border-right: 1px solid var(--color-accent-deep);
+  transform: rotate(45deg);
+}
+
+.idea-foundation {
+  max-width: 900px;
+  margin-top: 36px;
+  color: var(--color-muted);
+}
+
+.idea-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-line);
+}
+
+.idea-cta p {
+  font-weight: 600;
+}
+
+.idea-cta .button {
+  flex: 0 0 auto;
+}
+
+.idea-section .reveal.is-visible {
+  animation: idea-reveal 500ms ease-out both;
+}
+
+.product-flow.is-visible .product-connection {
+  animation: product-connect 600ms ease-out both;
+}
+
+.product-flow.is-visible .product-stage:nth-child(2) .product-connection {
+  animation-delay: 180ms;
+}
+
+@keyframes idea-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes product-connect {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 980px) {
+  .idea-audiences {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .idea-audience-card {
+    padding: 22px;
+  }
+
+  .product-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .product-stage {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 20px;
+    row-gap: 6px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .product-stage-icon {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  .product-stage h4,
+  .product-stage p {
+    margin: 0;
+  }
+
+  .product-stage h4 {
+    align-self: end;
+  }
+
+  .product-stage p {
+    align-self: start;
+  }
+
+  .product-connection {
+    top: 76px;
+    left: 32px;
+    width: 1px;
+    height: calc(100% - 48px);
+    transform-origin: top;
+  }
+
+  .product-connection::after {
+    top: auto;
+    right: -3px;
+    bottom: 0;
+    border-top: 0;
+    border-right: 1px solid var(--color-accent-deep);
+    border-bottom: 1px solid var(--color-accent-deep);
+  }
+
+  .product-flow.is-visible .product-connection {
+    animation-name: product-connect-vertical;
+  }
+
+  .idea-cta {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@keyframes product-connect-vertical {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idea-section .reveal.is-visible,
+  .product-flow.is-visible .product-connection {
+    animation: none;
+  }
+
+  .idea-audience-card:hover {
+    transform: none;
+  }
+}
+
 .evolution-section {
   background: #f5f8f7;
 }
@@ -1240,12 +1545,7 @@ h3 {
   }
 }
 
-@media (max-width: 980px) {
-  :root {
-    --container: min(100% - 36px, 760px);
-    --header-height: 76px;
-  }
-
+@media (max-width: 1100px) {
   .js-enabled .nav-toggle {
     display: block;
   }
@@ -1294,6 +1594,13 @@ h3 {
 
   .site-nav a {
     padding: 14px;
+  }
+}
+
+@media (max-width: 980px) {
+  :root {
+    --container: min(100% - 36px, 760px);
+    --header-height: 76px;
   }
 
   .hero-grid {
