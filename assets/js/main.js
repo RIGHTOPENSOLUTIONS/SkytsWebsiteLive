@@ -11,7 +11,7 @@ if (yearTarget) {
 }
 
 if (navToggle && siteNav) {
-  const mobileLayout = window.matchMedia("(max-width: 1100px)");
+  const mobileLayout = window.matchMedia("(max-width: 1200px)");
   const closeNavigation = (returnFocus = false) => {
     navToggle.setAttribute("aria-expanded", "false");
     body.classList.remove("nav-open");

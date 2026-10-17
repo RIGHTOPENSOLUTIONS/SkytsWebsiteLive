@@ -73,6 +73,26 @@
           <path d="M12 16 8 12c3-6 7-10 14-10 0 7-4 11-10 14Z M8 12H2l4-6h7 M12 16v6l6-4v-7 M6 16c-3 0-4 3-4 6 3 0 6-1 6-4" />
           <circle cx="16" cy="8" r="2" />
         </symbol>
+        <symbol id="icon-desktop" viewBox="0 0 24 24">
+          <rect x="2" y="3" width="20" height="14" rx="2" />
+          <path d="M8 21h8 M12 17v4 M2 13h20" />
+        </symbol>
+        <symbol id="icon-mobile" viewBox="0 0 24 24">
+          <rect x="6" y="2" width="12" height="20" rx="2" />
+          <path d="M10 5h4 M11 19h2" />
+        </symbol>
+        <symbol id="icon-server" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="7" rx="2" />
+          <rect x="3" y="14" width="18" height="7" rx="2" />
+          <path d="M7 6h.01 M7 17h.01 M12 6h5 M12 17h5 M7 10v4 M17 10v4" />
+        </symbol>
+        <symbol id="icon-folder-secure" viewBox="0 0 24 24">
+          <path d="M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v3 M15 15v-2a3 3 0 0 1 6 0v2" />
+          <rect x="13" y="15" width="10" height="7" rx="1" />
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+          <path d="m12 2 9 4v6c0 5-5 8-9 10-4-2-9-5-9-10V6l9-4Z M8 12l3 3 5-6" />
+        </symbol>
       </defs>
     </svg>
 
@@ -101,6 +121,7 @@
           <a href="#framework-applications">Framework Apps</a>
           <a href="#solutions">Solutions</a>
           <a href="#idea-to-product">Build With Us</a>
+          <a href="#connected-enterprise">Connected Enterprise</a>
           <a href="#evolution">Evolution</a>
           <a href="#connect">Connect</a>
         </nav>
@@ -418,6 +439,83 @@
             <p>Have a product idea? Let's explore it together.</p>
             <a class="button button-primary" href="#connect">Discuss Your Idea</a>
           </div>
+        </div>
+      </section>
+
+      <section class="section enterprise-section" id="connected-enterprise" aria-labelledby="enterprise-title" tabindex="-1">
+        <div class="container">
+          <div class="section-heading enterprise-heading reveal">
+            <p class="eyebrow">SKYTS® CONNECTED ENTERPRISE</p>
+            <h2 id="enterprise-title">Your Infrastructure. Your Communication. Your Data.</h2>
+            <p class="enterprise-tagline">Data Is Everything.</p>
+            <p>A vision for secure enterprise communication, connected business applications and controlled mobile access.</p>
+          </div>
+
+          <div class="enterprise-introduction reveal">
+            <h3>One Enterprise. Connected Communication.</h3>
+            <p>We envision a common communication foundation connecting employees through SKYTS® Framework applications and a dedicated mobile communication app. Internal conversations, documents and related information are designed to remain within customer-controlled infrastructure, with secure, permission-based access.</p>
+          </div>
+
+          <div class="enterprise-diagram reveal" role="group" aria-label="Planned architecture: SKYTS Framework Apps and a Mobile Communication App connect to SKYTS Connected Enterprise, supported by customer-controlled infrastructure.">
+            <ul class="enterprise-apps" aria-label="Planned application connections">
+              <li>
+                <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-desktop" /></svg>
+                <h4>SKYTS® Framework Apps</h4>
+                <p>Connected business applications and authorized users</p>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-mobile" /></svg>
+                <h4>Mobile Communication App</h4>
+                <p>Authorized employees and controlled access</p>
+              </li>
+            </ul>
+            <div class="enterprise-layer enterprise-foundation">
+              <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-communication" /></svg>
+              <div>
+                <h4>SKYTS® Connected Enterprise</h4>
+                <p>Internal Chat · Document Sharing · Business Notifications</p>
+              </div>
+            </div>
+            <div class="enterprise-layer enterprise-infrastructure">
+              <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-server" /></svg>
+              <div>
+                <h4>Customer-Controlled Infrastructure</h4>
+                <p>Communication Database · File Storage · Secure APIs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="enterprise-capabilities reveal">
+            <article class="enterprise-capability" aria-labelledby="enterprise-chat-title">
+              <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-communication" /></svg>
+              <h3 id="enterprise-chat-title">Internal Enterprise Chat</h3>
+              <p>Enable authorized users to communicate within their organization's own environment.</p>
+            </article>
+            <article class="enterprise-capability" aria-labelledby="enterprise-documents-title">
+              <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-folder-secure" /></svg>
+              <h3 id="enterprise-documents-title">Secure Document Sharing</h3>
+              <p>Exchange business files and attachments through controlled enterprise storage.</p>
+            </article>
+            <article class="enterprise-capability" aria-labelledby="enterprise-access-title">
+              <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-shield" /></svg>
+              <h3 id="enterprise-access-title">Controlled Access</h3>
+              <p>Permission-based access for employees, business applications and mobile devices.</p>
+            </article>
+            <article class="enterprise-capability" aria-labelledby="enterprise-api-title">
+              <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-api" /></svg>
+              <h3 id="enterprise-api-title">External API Readiness</h3>
+              <p>Designed to support authorized connections with external services when required.</p>
+            </article>
+          </div>
+
+          <div class="enterprise-closing reveal">
+            <svg viewBox="0 0 24 24" class="concept-icon" aria-hidden="true" focusable="false"><use href="#icon-shield" /></svg>
+            <div>
+              <h3>Internal by Design. Connected by Choice.</h3>
+              <p>Our vision is to keep internal communication and information within enterprise-controlled infrastructure, while allowing carefully authorized external connectivity as business needs evolve.</p>
+            </div>
+          </div>
+          <p class="enterprise-disclosure">SKYTS® Connected Enterprise is a planned technology initiative and is not yet a commercially available product.</p>
         </div>
       </section>
 
