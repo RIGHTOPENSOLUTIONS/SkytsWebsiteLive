@@ -574,6 +574,18 @@ h3 {
 
 .section-heading-wide {
   max-width: 1040px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.story-layout > .section-heading,
+.section-heading-wide {
+  text-align: center;
+}
+
+.section-heading-wide > p:not(.eyebrow) {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .story-layout,
@@ -2182,8 +2194,7 @@ h3 {
 }
 
 @media (min-width: 1101px) {
-  .story-copy p,
-  .solution-heading > p:last-child {
+  .story-copy p {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
