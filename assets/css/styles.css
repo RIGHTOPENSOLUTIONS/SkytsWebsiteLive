@@ -577,7 +577,6 @@ h3 {
 }
 
 .story-layout,
-.evolution-layout,
 .closing-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -1669,64 +1668,432 @@ h3 {
   border-top: 1px solid #d6dedb;
 }
 
-.evolution-directions {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 32px;
-  margin-top: 24px;
-  border-top: 1px solid #c5d0c9;
-  list-style: none;
-}
-
-.evolution-directions li {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  min-width: 0;
-  padding: 22px 0;
-  border-bottom: 1px solid #dce3e1;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.evolution-directions li > div {
-  min-width: 0;
-}
-
-.evolution-directions .concept-icon {
-  color: var(--color-forest);
-}
-
-.evolution-directions span {
-  display: block;
-  line-height: 1.35;
-}
-
-.evolution-directions small {
-  display: block;
-  margin-top: 7px;
-  color: var(--color-muted);
-  font-size: 0.8125rem;
-  font-weight: 400;
-  line-height: 1.55;
-}
-
-.evolution-source {
-  position: relative;
-  color: var(--color-accent-deep);
-  font-weight: 600;
+.intelligence-heading {
+  max-width: 960px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.evolution-source::after {
+.intelligence-heading h2 {
+  overflow-wrap: anywhere;
+}
+
+.intelligence-heading > p:not(.eyebrow) {
+  max-width: 900px;
+  margin: 12px auto 0;
+  font-size: 1rem;
+}
+
+.intelligence-heading > p.intelligence-key {
+  margin-top: 16px;
+  color: var(--color-accent-deep);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.intelligence-connection,
+.intelligence-business,
+.intelligence-platforms,
+.intelligence-themes {
+  margin-top: 28px;
+}
+
+.intelligence-group-heading {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intelligence-group-heading h3,
+.intelligence-future h3 {
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+
+.intelligence-group-heading p {
+  margin-top: 8px;
+  color: var(--color-muted);
+}
+
+.intelligence-diagram {
+  max-width: 900px;
+  margin: 20px auto 0;
+  padding: 24px;
+  border: 1px solid #d6dedb;
+  border-radius: var(--radius-small);
+  background: var(--color-section-light);
+}
+
+.intelligence-endpoints {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+}
+
+.intelligence-endpoints li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: var(--color-ink);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-endpoints .concept-icon {
+  color: var(--color-forest);
+}
+
+.intelligence-sources li::after,
+.intelligence-sources::after,
+.intelligence-foundation::before,
+.intelligence-targets::before,
+.intelligence-targets::after,
+.intelligence-targets li::before {
   content: "";
   position: absolute;
+  background: #c5d0c9;
+}
+
+.intelligence-sources li::after {
   top: 100%;
   left: 50%;
-  height: 24px;
   width: 1px;
-  background: #c5d0c9;
+  height: 12px;
+}
+
+.intelligence-sources::after {
+  top: calc(100% + 12px);
+  left: calc((100% - 48px) / 6);
+  right: calc((100% - 48px) / 6);
+  height: 1px;
+}
+
+.intelligence-foundation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 660px;
+  margin: 32px auto 0;
+  padding: 16px 20px;
+  border-top: 2px solid var(--color-accent-deep);
+  border-bottom: 1px solid #e4b592;
+  background: var(--color-accent-soft);
+  text-align: center;
+}
+
+.intelligence-foundation > div {
+  min-width: 0;
+}
+
+.intelligence-foundation > .concept-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent-deep);
+}
+
+.intelligence-foundation h4 {
+  margin: 0;
+  color: var(--color-accent-deep);
+  font-size: 1.125rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-foundation p {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.intelligence-foundation::before {
+  top: -22px;
+  left: 50%;
+  width: 1px;
+  height: 22px;
+  transform-origin: top;
+}
+
+.intelligence-targets {
+  margin-top: 32px;
+}
+
+.intelligence-targets::before {
+  top: -12px;
+  left: calc((100% - 48px) / 6);
+  right: calc((100% - 48px) / 6);
+  height: 1px;
+}
+
+.intelligence-targets::after {
+  top: -32px;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+  transform-origin: top;
+}
+
+.intelligence-targets li::before {
+  top: -12px;
+  left: 50%;
+  width: 1px;
+  height: 12px;
+}
+
+.intelligence-sharing-note,
+.intelligence-disclosure {
+  max-width: 900px;
+  margin: 12px auto 0;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.intelligence-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.intelligence-value-card,
+.intelligence-platform-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #d6dedb;
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.intelligence-value-card:hover,
+.intelligence-platform-card:hover {
+  border-color: var(--color-accent-deep);
+  box-shadow: 0 8px 20px rgba(21, 20, 17, 0.06);
+  transform: translateY(-2px);
+}
+
+.intelligence-value-card > .concept-icon,
+.intelligence-platform-card > .concept-icon {
+  color: var(--color-forest);
+}
+
+.intelligence-value-card h4,
+.intelligence-platform-card h4 {
+  margin: 12px 0 0;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-value-card p,
+.intelligence-platform-card p {
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.intelligence-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.intelligence-platform-card {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  column-gap: 14px;
+  padding: 18px;
+}
+
+.intelligence-platform-card > .concept-icon {
+  grid-row: 1 / span 2;
+}
+
+.intelligence-platform-card h4 {
+  margin-top: 0;
+}
+
+.intelligence-platform-card p {
+  grid-column: 2;
+  margin-top: 4px;
+}
+
+.intelligence-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  list-style: none;
+}
+
+.intelligence-theme-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px 8px;
+  border: 1px solid #d6dedb;
+  border-radius: var(--radius-small);
+  background: var(--color-section-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-theme-grid .concept-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-forest);
+}
+
+.intelligence-future {
+  margin-top: 28px;
+  padding: 20px 24px;
+  border-top: 1px solid #d6dedb;
+  border-bottom: 1px solid #d6dedb;
+  background: var(--color-section-light);
+  text-align: center;
+}
+
+.intelligence-future p {
+  max-width: 900px;
+  margin: 8px auto 0;
+  color: var(--color-muted);
+}
+
+.intelligence-future p.intelligence-mcp-note {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.intelligence-initiative-disclosure {
+  margin-top: 16px;
+}
+
+.evolution-section .reveal.is-visible {
+  animation: idea-reveal 500ms ease-out both;
+}
+
+.intelligence-diagram.is-visible .intelligence-foundation::before,
+.intelligence-diagram.is-visible .intelligence-targets::after {
+  animation: product-connect-vertical 600ms ease-out both;
+}
+
+.intelligence-diagram.is-visible .intelligence-targets::after {
+  animation-delay: 180ms;
+}
+
+@media (max-width: 980px) {
+  .intelligence-value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-value-card {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    column-gap: 16px;
+  }
+
+  .intelligence-value-card > .concept-icon {
+    grid-row: 1 / span 2;
+  }
+
+  .intelligence-value-card h4 {
+    margin-top: 0;
+  }
+
+  .intelligence-value-card p {
+    grid-column: 2;
+  }
+
+  .intelligence-theme-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .intelligence-diagram {
+    padding: 16px;
+  }
+
+  .intelligence-endpoints {
+    gap: 12px;
+  }
+
+  .intelligence-endpoints li {
+    font-size: 0.875rem;
+  }
+
+  .intelligence-sources::after,
+  .intelligence-targets::before {
+    left: calc((100% - 24px) / 6);
+    right: calc((100% - 24px) / 6);
+  }
+
+  .intelligence-foundation {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 12px;
+  }
+
+  .intelligence-platform-grid,
+  .intelligence-value-card {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-value-card > .concept-icon {
+    grid-row: auto;
+  }
+
+  .intelligence-value-card h4 {
+    margin-top: 12px;
+  }
+
+  .intelligence-value-card p {
+    grid-column: auto;
+  }
+
+  .intelligence-theme-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intelligence-value-card,
+  .intelligence-platform-card,
+  .intelligence-future {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evolution-section .reveal.is-visible,
+  .intelligence-diagram.is-visible .intelligence-foundation::before,
+  .intelligence-diagram.is-visible .intelligence-targets::after {
+    animation: none;
+  }
+
+  .intelligence-value-card:hover,
+  .intelligence-platform-card:hover {
+    transform: none;
+  }
 }
 
 .closing-section {
@@ -1949,7 +2316,6 @@ h3 {
   }
 
   .story-layout,
-  .evolution-layout,
   .closing-layout {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -2154,14 +2520,6 @@ h3 {
     text-align: left;
   }
 
-  .evolution-directions {
-    column-gap: 18px;
-  }
-
-  .evolution-directions li {
-    font-size: 1rem;
-  }
-
   .closing-philosophy {
     font-size: 2.75rem;
   }
@@ -2174,10 +2532,6 @@ h3 {
 @media (max-width: 380px) {
   h1 {
     font-size: 4.5rem;
-  }
-
-  .evolution-directions {
-    grid-template-columns: 1fr;
   }
 
   .closing-philosophy {
